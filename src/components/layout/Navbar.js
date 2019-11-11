@@ -1,22 +1,35 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ icon, title }) => {
   return (
     <nav className='navbar bg-primary'>
       <h1>
         <i className={icon} /> {title}
+        <p
+          className='all-center'
+          style={{ color: "#000000", fontSize: "0.65rem" }}
+        >
+          Created by Alkesh Desai
+        </p>
       </h1>
-      <h6 style={{ color: "#000000", fontSize: "0.65rem" }}>
-        Created by Alkesh Desai
-      </h6>
+
+      <ul>
+        <li>
+          <Link to='/'>Home</Link>
+        </li>
+        <li>
+          <Link to='/about'>About</Link>
+        </li>
+      </ul>
     </nav>
   );
 };
 
 Navbar.defaultProps = {
   title: "Github Finder",
-  icon: "fa fa-search"
+  icon: "fab fa-github"
 };
 
 Navbar.propTypes = {
