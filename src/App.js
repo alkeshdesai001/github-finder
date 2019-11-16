@@ -10,8 +10,6 @@ import NotFound from "./components/pages/NotFound";
 import GithubState from "./context/github/GithubState";
 import AlertState from "./context/alert/AlertState";
 
-import "./App.css";
-
 const App = () => {
   return (
     <GithubState>

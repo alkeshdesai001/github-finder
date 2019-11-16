@@ -4,23 +4,22 @@ import { Link } from "react-router-dom";
 
 const UserItems = ({ user: { avatar_url, html_url, login } }) => {
   return (
-    <div
-      className='card text-center'
-      style={{
-        backgroundColor: "#f4f4f4"
-      }}
-    >
-      <img
-        src={avatar_url}
-        alt='avatar'
-        className='round-img'
-        style={{ width: "75px" }}
-      />
-      <h3> {login} </h3>
-      <div>
-        <Link to={`/user/${login}`} className='btn btn-dark btn-sm my-1'>
-          More
-        </Link>
+    <div class='row'>
+      <div class='col m7'>
+        <div class='card' style={{ height: "18rem", width: "10rem" }}>
+          <div class='card-image'>
+            <img src={avatar_url} alt='avatar' className='responsive-img' />
+            <span class='card-title'> </span>
+          </div>
+          <div class='card-content'>
+            <p className='center-align'>
+              <strong>{login}</strong>
+            </p>
+          </div>
+          <div class='card-action'>
+            <Link to={`/user/${login}`}> More</Link>
+          </div>
+        </div>
       </div>
     </div>
   );
